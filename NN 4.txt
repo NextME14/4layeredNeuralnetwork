@@ -1,0 +1,29 @@
+**Neural Network Report**
+
+1) **Introduction:**
+The given code implements a feedforward neural network, which is a type of artificial neural network. Neural networks are widely used for solving various machine learning tasks, including classification, regression, and pattern recognition. This report provides an analysis of the neural network architecture, input data, weight and bias initialization, propagations, softmax function, and the resulting output.
+
+2) **Neural Network Architecture:**
+The neural network architecture consists of four hidden layers and an output layer. The hidden layers use the sigmoid activation function, while the output layer uses the softmax activation function. The layer sizes are as follows:
+- First Hidden Layer: 128 units
+- Second Hidden Layer: 64 units
+- Third Hidden Layer: 32 units
+- Output Layer: 10 units
+
+3) **Input Data:**
+The input data `X` is a randomly generated array of shape (1, 756), indicating one sample with 756 features. Random initialization of input data is a common practice in neural network training.
+
+4) **Weight and Bias Initialization:**
+The weight matrices (`W1`, `W2`, `W3`, `W4`) are initialized with random values. The shapes of these weight matrices are (756, 128), (128, 64), (64, 32), and (32, 10) respectively, corresponding to the connections between the layers. The bias vectors (`B1`, `B2`, `B3`, `B4`) are also initialized randomly with shapes (1, 128), (1, 64), (1, 32), and (1, 10) respectively.
+
+5) **Propagation:**
+The code performs forward propagation to compute the outputs of each layer. The dot product of the input data and the weight matrix for each hidden layer is computed, and the corresponding bias vector is added. The result is then passed through the sigmoid activation function, producing the output for that layer. This process is repeated for each hidden layer.
+
+6) **Softmax Function:**
+The softmax function is used in the output layer to convert the final layer activations (`A4`) into a probability distribution. The function normalizes the values by subtracting the maximum value for numerical stability and dividing by the sum of the exponential values of the inputs.
+
+7) **Result:**
+The code prints the shapes of the intermediate outputs and the final output. The shapes confirm the dimensions of the weight matrices, input data, bias vectors, and the activations of the hidden layers and output layer.
+
+8) **Conclusion:**
+In conclusion, the provided code demonstrates the construction and forward propagation of a feedforward neural network with four hidden layers and an output layer. It uses the sigmoid activation function for the hidden layers and the softmax activation function for the output layer. The code initializes the weight matrices and bias vectors randomly and performs the necessary computations to produce the final output. This neural network architecture can be used for various machine learning tasks, including multi-class classification problems.

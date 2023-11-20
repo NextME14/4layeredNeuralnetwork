@@ -1,0 +1,36 @@
+Project Report: Implementation of Four-Layer Neural Network using NumPy
+
+1. Introduction:
+The goal of this project is to implement a four-layer neural network using NumPy's multidimensional arrays. The neural network architecture consists of an input layer, three hidden layers, and an output layer. The input data, represented by X, has a shape of 1 * 756, and the output data, represented by Y, has a shape of 1 * 10. The softmax function is used to compute the output probabilities of the neural network.
+
+2. Neural Network Architecture:
+The neural network architecture is defined as follows:
+- Input layer: 756 neurons
+- Hidden layer 1: 256 neurons
+- Hidden layer 2: 128 neurons
+- Hidden layer 3: 64 neurons
+- Output layer: 10 neurons
+
+3. Input Data:
+Random values are generated for the input data X and output data Y. X has a shape of 1 * 756, and Y has a shape of 1 * 10.
+
+4. Weight and Bias Initialization:
+Weights and biases are randomly initialized for each layer of the neural network. The weights are initialized using the standard normal distribution, and the biases are initialized using the standard normal distribution as well.
+
+5. Forward Propagation:
+The forward propagation function, `forward_propagation(X)`, computes the output probabilities of the neural network given an input X. The forward propagation process involves the following steps:
+- Compute the activations of the hidden layers using the dot product of the input and weights, and adding the corresponding biases.
+- Apply the ReLU activation function to the hidden layer activations.
+- Compute the activations of the output layer using the dot product of the last hidden layer and output layer weights, and adding the output layer biases.
+- Apply the softmax function to the output layer activations to obtain the output probabilities.
+
+6. Softmax Function:
+The softmax function is used to compute the output probabilities of the neural network. The softmax function normalizes the output layer activations by exponentiating them and dividing by the sum of exponentiated values. This ensures that the output probabilities sum up to 1.
+
+7. Results:
+The forward propagation function is called with the input data X to obtain the predicted output probabilities. The predictions are printed using the `print` function.
+
+8. Conclusion:
+In this project, a four-layer neural network was successfully implemented using NumPy's multidimensional arrays. The neural network was able to compute the output probabilities for the given input data. The implementation demonstrates the fundamental concepts of forward propagation in neural networks and the use of activation functions like ReLU and softmax.
+
+Note: The provided code assumes that the necessary NumPy library has been imported, and all required functions and variables have been defined and initialized correctly.
